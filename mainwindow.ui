@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AvisionR - Control Panel</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame_sideBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>110</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frame_sideBar {
+background-color: qlineargradient(spread:repeat, x1:0, y1:0, x2:0, y2:1, stop:0.346591 #535353, stop:1 #262626);
+border-bottom: 3.5px outset #535353;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_Logout_2">
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+         </property>
+         <property name="text">
+          <string>Clients</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" rowspan="2">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>553</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2" rowspan="2">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_Logout_4">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Users</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Users">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Users  {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Users:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Users:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="3" rowspan="2">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_Logout_3">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Settings</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Settings">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Settings  {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Settings:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Settings:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="4" rowspan="2">
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_Logout">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Logout</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Logout">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Logout  {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Logout:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Logout:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="5" rowspan="2">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_Logout_5">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Clock Out</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_ClockOut">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_ClockOut  {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_ClockOut:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_ClockOut:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_Customers">
+         <property name="minimumSize">
+          <size>
+           <width>95</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">   QPushButton#pushButton_Customers {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Customers:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Customers:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">background-image:url(&quot;stripes.png&quot;)
+ repeat;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

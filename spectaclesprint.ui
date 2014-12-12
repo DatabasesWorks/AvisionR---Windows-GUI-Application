@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SpectaclesPrint</class>
+ <widget class="QDialog" name="SpectaclesPrint">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>339</width>
+    <height>112</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>425</width>
+    <height>112</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>AvisionR - Print Menu</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color:rgb(255, 255, 255);
+background-color: #262626;</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>97</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QLabel" name="label_Logout_6">
+      <property name="styleSheet">
+       <string notr="true">   QPushButton#pushButton_Customers {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Customers:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Customers:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(64,64,64));
+} </string>
+      </property>
+      <property name="text">
+       <string>Client</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Client">
+      <property name="minimumSize">
+       <size>
+        <width>95</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>95</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   QPushButton#pushButton_Client {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Client:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Client:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(64,64,64));
+} </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>97</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
+    <item>
+     <widget class="QLabel" name="label_Logout_7">
+      <property name="styleSheet">
+       <string notr="true">   QPushButton#pushButton_Customers {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Customers:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Customers:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(64,64,64));
+} </string>
+      </property>
+      <property name="text">
+       <string>Lab</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Lab">
+      <property name="minimumSize">
+       <size>
+        <width>95</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>95</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   QPushButton#pushButton_Lab {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Lab:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Lab:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(64,64,64));
+} </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>97</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_7">
+    <item>
+     <widget class="QLabel" name="label_Logout_8">
+      <property name="styleSheet">
+       <string notr="true">   QPushButton#pushButton_Customers {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Customers:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Customers:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(64,64,64));
+} </string>
+      </property>
+      <property name="text">
+       <string>Both</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Both">
+      <property name="minimumSize">
+       <size>
+        <width>95</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>95</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">   QPushButton#pushButton_Both {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Both:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Both:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(64,64,64));
+} </string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
