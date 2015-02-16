@@ -32,6 +32,12 @@ background-color: #262626;</string>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">
     <widget class="QLineEdit" name="lineEdit_Last">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="styleSheet">
       <string notr="true">border: 1px solid #686868;</string>
      </property>
@@ -39,26 +45,44 @@ background-color: #262626;</string>
    </item>
    <item row="0" column="2">
     <widget class="QLineEdit" name="lineEdit_First">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="styleSheet">
       <string notr="true">border: 1px solid #686868;</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="3">
+   <item row="0" column="3" colspan="2">
     <widget class="QLineEdit" name="lineEdit_Phone">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="styleSheet">
       <string notr="true">border: 1px solid #686868;</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="4" colspan="2">
+   <item row="0" column="5" colspan="2">
     <widget class="QLineEdit" name="lineEdit_Account">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="styleSheet">
       <string notr="true">border: 1px solid #686868;</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="0" colspan="6">
+   <item row="1" column="0" colspan="7">
     <widget class="QTableView" name="tableView_Customers">
      <property name="styleSheet">
       <string notr="true">QHeaderView::section {
@@ -133,6 +157,22 @@ background-color: #262626;
     </widget>
    </item>
    <item row="2" column="5">
+    <widget class="QCommandLinkButton" name="commandLinkButton_Clear">
+     <property name="maximumSize">
+      <size>
+       <width>91</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="6">
     <widget class="QCommandLinkButton" name="commandLinkButton_Search">
      <property name="maximumSize">
       <size>

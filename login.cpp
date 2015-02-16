@@ -5,11 +5,29 @@
 #include "QMessageBox"
 #include "mainwindow.h"
 
-Login::Login(QWidget *parent) :
+Login::Login(QWidget *parent, QString target) :
     QDialog(parent),
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+
+    thisTarget = target;
+
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    QPixmap pix("pixMap/eye.png");
+    ui->label_6->setPixmap(pix);
+
+    QPixmap pix2("pixMap/Gradientlogin2.png");
+    ui->label_3->setPixmap(pix2);
+
+    QPixmap pix3("pixMap/Userlogin1.png");
+    ui->label->setPixmap(pix3);
+
+    QPixmap pix4("pixMap/Passwordlogin.png");
+    ui->label_2->setPixmap(pix4);
 
     QPalette palette = ui->label_AvisionR->palette();
     palette.setColor(ui->label_AvisionR->foregroundRole(), Qt::gray);
@@ -81,7 +99,7 @@ void Login::on_commandLinkButton_Login_clicked()
             ui->label_Status->setText("Username and Password Correct");
 
             this->hide();
-            MainWindow *mainWindow = new MainWindow(0, empID);
+            MainWindow *mainWindow = new MainWindow(0, empID, name, admin, thisTarget);
             mainWindow->showMaximized();
 
             onClock = 1;
@@ -111,7 +129,10 @@ void Login::on_commandLinkButton_Login_clicked()
         else if(count > 1)
             ui->label_Status->setText("Duplicate Username and Password");
         else if(count < 1)
+        {
             ui->label_Status->setText("Incorrect Username and Password");
+            ui->label_Status->setStyleSheet("background-color: rgb(255, 67, 70);");
+        }
         else
             ui->label_Status->setText("ERROR" );
 
@@ -220,4 +241,16 @@ void Login::on_commandLinkButton_Login_clicked()
         conn.connClose();
         }
     }
+}
+
+void Login::on_lineEdit_User_textChanged()
+{
+    ui->label_Status->setText("");
+    ui->label_Status->setStyleSheet("");
+}
+
+void Login::on_lineEdit_Password_textChanged()
+{
+    ui->label_Status->setText("");
+    ui->label_Status->setStyleSheet("");
 }

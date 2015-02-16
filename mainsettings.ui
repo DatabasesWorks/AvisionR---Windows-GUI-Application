@@ -10,6 +10,18 @@
     <height>402</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>439</width>
+    <height>402</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>439</width>
+    <height>402</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>AvisionR - Settings</string>
   </property>
@@ -29,7 +41,7 @@ background-color: #262626;</string>
    <property name="styleSheet">
     <string notr="true">QTabBar::tab
 {
-    background-color: #686868;
+	    background-color: #686868;
 
 }
 
@@ -37,14 +49,17 @@ QTabWidget::pane
 {
  border: 0px;
  top: 0.1em;
- border-image: url(tabBG.png);
      border-width: 1px;
+
      border-style: solid;
      border-color: grey;
 }
 
 color: black;
 border: 1px solid #686868;</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
     <number>0</number>
@@ -226,9 +241,9 @@ border: 1px solid #686868;</string>
     <widget class="QCommandLinkButton" name="commandLinkButton_save">
      <property name="geometry">
       <rect>
-       <x>167</x>
-       <y>262</y>
-       <width>172</width>
+       <x>28</x>
+       <y>280</y>
+       <width>311</width>
        <height>40</height>
       </rect>
      </property>
@@ -380,7 +395,7 @@ border: 1px solid #686868;</string>
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>21</x>
@@ -415,14 +430,65 @@ border: 1px solid #686868;</string>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>layoutWidget_2</zorder>
-    <zorder>layoutWidget_3</zorder>
     <zorder>layoutWidget_4</zorder>
     <zorder>layoutWidget</zorder>
     <zorder>label</zorder>
     <zorder>commandLinkButton_save</zorder>
-    <zorder>label_2</zorder>
-    <zorder>lineEdit_phone</zorder>
     <zorder>layoutWidget_3</zorder>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Database</string>
+    </attribute>
+    <widget class="QComboBox" name="comboBox_Database">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>150</y>
+       <width>221</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>120</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Select Database: </string>
+     </property>
+    </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton_Apply">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>270</y>
+       <width>91</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+    <widget class="QCommandLinkButton" name="commandLinkButton_Cancel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>270</y>
+       <width>81</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

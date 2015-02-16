@@ -14,13 +14,15 @@ class NewPurchase : public QDialog
 
 public:
     explicit NewPurchase(QWidget *parent = 0, QString Address1 = "", QString Address2 = "",
-                         qint32 Account = 0, customerProfile *profile = new customerProfile());
+                         qint32 Account = 0, customerProfile *profile = new customerProfile(),
+                         QString name = "");
     ~NewPurchase();
 
     QString thisAddress1;
     QString thisAddress2;
     qint32 thisAccount;
     customerProfile *thisProfile;
+    QString globalName;
 
 private slots:
     void on_pushButton_SingleVision_clicked();

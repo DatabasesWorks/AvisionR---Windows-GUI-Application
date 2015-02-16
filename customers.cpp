@@ -5,11 +5,17 @@
 #include "customerprofile.h"
 #include "newaccount.h"
 
-Customers::Customers(QWidget *parent) :
+Customers::Customers(QWidget *parent, QString name) :
     QDialog(parent),
     ui(new Ui::Customers)
 {
     ui->setupUi(this);
+
+    QPixmap windowIconPix("/pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    globalName = name;
     ui->lineEdit_Account->setPlaceholderText("Account Number");
     ui->lineEdit_First->setPlaceholderText("First Name");
     ui->lineEdit_Last->setPlaceholderText("Last Name");
@@ -32,26 +38,6 @@ Customers::Customers(QWidget *parent) :
 Customers::~Customers()
 {
     delete ui;
-}
-
-void Customers::on_lineEdit_Last_selectionChanged()
-{
-    ui->lineEdit_Last->setText("");
-}
-
-void Customers::on_lineEdit_First_selectionChanged()
-{
-    ui->lineEdit_First->setText("");
-}
-
-void Customers::on_lineEdit_Phone_selectionChanged()
-{
-    ui->lineEdit_Phone->setText("");
-}
-
-void Customers::on_lineEdit_Account_selectionChanged()
-{
-    ui->lineEdit_Account->setText("");
 }
 
 void Customers::on_commandLinkButton_Search_clicked()
@@ -130,10 +116,13 @@ void Customers::on_tableView_Customers_doubleClicked(const QModelIndex &index)
 
     conn.connClose();
 
-    customerProfile *customerprofile = new customerProfile(0, account, Last, First, Phone, Address1, Address2);
+    customerProfile *customerprofile = new customerProfile(0, account, Last, First,
+                                          Phone, Address1, Address2, globalName);
     customerprofile->setup();
     customerprofile->setModal(true);
     customerprofile->show();
+
+    this->hide();
 }
 
 void Customers::link()
@@ -143,7 +132,7 @@ void Customers::link()
 
 void Customers::on_commandLinkButton_New_clicked()
 {
-    NewAccount *newAccount = new NewAccount(0, this);
+    NewAccount *newAccount = new NewAccount(0, this, globalName);
     newAccount->setModal(true);
     newAccount->optimize();
     newAccount->show();
@@ -152,4 +141,13 @@ void Customers::on_commandLinkButton_New_clicked()
 void Customers::on_commandLinkButton_Search_2_clicked()
 {
     this->hide();
+}
+
+void Customers::on_commandLinkButton_Clear_clicked()
+{
+    ui->lineEdit_Account->setText("");
+    ui->lineEdit_First->setText("");
+    ui->lineEdit_Last->setText("");
+    ui->lineEdit_Phone->setText("");
+    this->on_commandLinkButton_Search_clicked();
 }

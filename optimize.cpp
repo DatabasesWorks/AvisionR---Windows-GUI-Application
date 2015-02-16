@@ -8,6 +8,10 @@ Optimize::Optimize(QWidget *parent, NewAccount *newaccount) :
 {
     ui->setupUi(this);
 
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
     thisNewAccount = newaccount;
 
     {

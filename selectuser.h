@@ -23,6 +23,10 @@ public:
 private slots:
     void on_commandLinkButton_update_clicked();
 
+    void on_commandLinkButton_delete_clicked();
+
+    void on_commandLinkButton_cancel_clicked();
+
 private:
     Ui::SelectUser *ui;
 };

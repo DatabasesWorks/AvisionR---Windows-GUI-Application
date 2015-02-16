@@ -90,7 +90,7 @@ background-color: #262626;
     <string>New Purchase</string>
    </property>
   </widget>
-  <widget class="QCommandLinkButton" name="commandLinkButton_2">
+  <widget class="QCommandLinkButton" name="commandLinkButton_modify">
    <property name="geometry">
     <rect>
      <x>450</x>

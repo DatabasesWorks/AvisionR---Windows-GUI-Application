@@ -17,7 +17,7 @@ public:
     ~NewUser();
 
     UserManagement *thisUser;
-    qint32 newID = 0;
+    qint32 newID;
 
 private slots:
     void on_commandLinkButton_save_clicked();

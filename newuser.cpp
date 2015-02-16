@@ -7,6 +7,9 @@ NewUser::NewUser(QWidget *parent, UserManagement *user) :
     ui(new Ui::NewUser)
 {
     ui->setupUi(this);
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
 
     thisUser = user;
 }

@@ -10,6 +10,10 @@ LabPrint::LabPrint(QWidget *parent, qint32 transaction, QString date, QString de
 {
     ui->setupUi(this);
 
+    QPixmap windowIconPix("/pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
     ui->label_fullName->setText(fullName);
     ui->label_phoneNumber->setText(Phone);
     ui->label_Date->setText(date.left(10));
@@ -44,9 +48,9 @@ LabPrint::LabPrint(QWidget *parent, qint32 transaction, QString date, QString de
         {
             QString tempPhone = qry->value(11).toString();
             ui->label_bottom->setText("AvisionR " + qry->value(6).toString() + "" + qry->value(7).toString() +
-                                      " " + qry->value(8).toString() + ", " + qry->value(9).toString() + " "  +
-                                      qry->value(10).toString() + " (" + tempPhone.left(3) + ")" + tempPhone.mid(3,3) + "-" +
-                                      tempPhone.right(4));
+                      " " + qry->value(8).toString() + ", " + qry->value(9).toString() + " "  +
+                      qry->value(10).toString() + " (" + tempPhone.left(3) + ")" + tempPhone.mid(3,3) + "-" +
+                      tempPhone.right(4));
         }
     }
 
@@ -100,27 +104,29 @@ LabPrint::LabPrint(QWidget *parent, qint32 transaction, QString date, QString de
             ui->lineEdit_NPDTotal->setText(qry->value(30).toString());
             ui->lineEdit_NPDOD->setText(qry->value(31).toString());
             ui->lineEdit_NPDOS->setText(qry->value(32).toString());
-            ui->lineEdit_EyeBridge->setText(qry->value(33).toString());
-            ui->lineEdit_Temple->setText(qry->value(34).toString());
-            ui->lineEdit_B->setText(qry->value(35).toString());
-            ui->lineEdit_ED->setText(qry->value(36).toString());
-            ui->lineEdit_LensMaterial->setText(qry->value(37).toString());
-            ui->lineEdit_FrameStyle ->setText(qry->value(38).toString());
-            ui->lineEdit_ColorTrim->setText(qry->value(39).toString());
+            ui->lineEdit_EyeBridge_2->setText(qry->value(33).toString());
+            ui->lineEdit_Temple_2->setText(qry->value(34).toString());
+            ui->lineEdit_B_2->setText(qry->value(35).toString());
+            ui->lineEdit_ED_2->setText(qry->value(36).toString());
+            ui->lineEdit_LensMaterialLeft_2->setText(qry->value(37).toString());
+            ui->lineEdit_LensMaterialRight_2->setText(qry->value(38).toString());
+            ui->lineEdit_FrameStyle ->setText(qry->value(39).toString());
+            ui->lineEdit_ColorTrim->setText(qry->value(40).toString());
 
-            ui->checkBox_StraightTop->setChecked(qry->value(40).toBool());
-            ui->checkBox_RoundSegment->setChecked(qry->value(41).toBool());
-            ui->checkBox_TriFocal->setChecked(qry->value(42).toBool());
-            ui->checkBox_Blended->setChecked(qry->value(43).toBool());
-            ui->checkBox_Progressive->setChecked(qry->value(44).toBool());
-            ui->checkBox_Executive->setChecked(qry->value(45).toBool());
-            ui->checkBox_UVProtection->setChecked(qry->value(46).toBool());
-            ui->checkBox_ScratchCoat->setChecked(qry->value(47).toBool());
-            ui->checkBox_HighIndex->setChecked(qry->value(48).toBool());
-            ui->checkBox_AntiReflective->setChecked(qry->value(49).toBool());
-            ui->checkBox_PGX->setChecked(qry->value(50).toBool());
-            ui->checkBox_Transition->setChecked(qry->value(51).toBool());
-            ui->lineEdit_Tint->setText(qry->value(52).toString());
+            ui->checkBox_StraightTop->setChecked(qry->value(41).toBool());
+            ui->checkBox_RoundSegment->setChecked(qry->value(42).toBool());
+            ui->checkBox_TriFocal->setChecked(qry->value(43).toBool());
+            ui->checkBox_Blended->setChecked(qry->value(44).toBool());
+            ui->checkBox_Progressive->setChecked(qry->value(45).toBool());
+            ui->checkBox_Executive->setChecked(qry->value(46).toBool());
+            ui->checkBox_UVProtection->setChecked(qry->value(47).toBool());
+            ui->checkBox_ScratchCoat->setChecked(qry->value(48).toBool());
+            ui->checkBox_HighIndex->setChecked(qry->value(49).toBool());
+            ui->checkBox_AntiReflective->setChecked(qry->value(50).toBool());
+            ui->checkBox_PGX->setChecked(qry->value(51).toBool());
+            ui->checkBox_Transition->setChecked(qry->value(52).toBool());
+
+            ui->lineEdit_Tint->setText(qry->value(53).toString());
             ui->textEdit_Notes->setText(qry->value(56).toString());
         }
     }

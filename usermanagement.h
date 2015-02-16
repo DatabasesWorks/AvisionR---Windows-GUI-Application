@@ -15,7 +15,7 @@ public:
     explicit UserManagement(QWidget *parent = 0);
     ~UserManagement();
 
-    qint32 currentEmpId = 0;
+    qint32 currentEmpId;
 
     void setup();
 

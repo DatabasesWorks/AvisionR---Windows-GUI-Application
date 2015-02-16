@@ -32,9 +32,9 @@ background-color: #262626;</string>
   <widget class="QCommandLinkButton" name="commandLinkButton_update">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>10</x>
      <y>340</y>
-     <width>91</width>
+     <width>81</width>
      <height>41</height>
     </rect>
    </property>
@@ -51,7 +51,7 @@ background-color: #262626;</string>
   <widget class="QCommandLinkButton" name="commandLinkButton_cancel">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>180</x>
      <y>340</y>
      <width>91</width>
      <height>41</height>
@@ -284,6 +284,25 @@ background-color: #262626;</string>
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QCommandLinkButton" name="commandLinkButton_delete">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>340</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
   </widget>
  </widget>
  <resources/>

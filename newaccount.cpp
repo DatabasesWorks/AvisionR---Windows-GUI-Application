@@ -5,15 +5,21 @@
 #include "optimize.h"
 //#include <QtTest/QTest>
 
-NewAccount::NewAccount(QWidget *parent, Customers *client) :
+NewAccount::NewAccount(QWidget *parent, Customers *client, QString name) :
     QDialog(parent),
     ui(new Ui::NewAccount)
 {
     ui->setupUi(this);
+
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    globalName = name;
     thisClient = client;
 
     {
-        QPixmap pix("C:/Users/Andrew/Dropbox/Computer Science/Projects/ARVision/pixMap/Optimize.png");
+        QPixmap pix("pixMap/Optimize.png");
         QIcon icon(pix);
         ui->pushButton_Optimize->setIcon(icon);
         ui->pushButton_Optimize->setIconSize(pix.size());
@@ -33,7 +39,7 @@ void NewAccount::on_commandLinkButton_clicked()
     QString Phone = "(" + ui->lineEdit_PhoneArea->text() + ")"
             + ui->lineEdit_PhoneMiddle->text() + "-" + ui->lineEdit_PhoneRight->text();
     QString Address1 = ui->lineEdit_StreetAddress->text();
-    QString Address2 = ui->lineEdit_City->text() + " " + ui->lineEdit_State->text() + " "
+    QString Address2 = ui->lineEdit_City->text() + " " + ui->lineEdit_State->text() + ", "
             + ui->lineEdit_ZipCode->text();
 
     {
@@ -116,16 +122,17 @@ void NewAccount::on_commandLinkButton_clicked()
     QString queryString;
     QTextStream queryStream(&queryString);
     queryStream << "CREATE TABLE '" << newAccount << "' ('Transaction' INTEGER,'Date' DATETIME,'Description'"
-                << " VARCHAR,'Cost' DOUBLE,'Status' VARCHAR,'SphereOD' DOUBLE,'CylinderOD' DOUBLE,'AxisOD'"
-                << " INTEGER,'PrismOD' VARCHAR,'BCOD' DOUBLE,'DecInOD' DOUBLE,'OutOD' INTEGER,'SphereOS' DOUBLE,'CylinderOS'"
-                << " DOUBLE,'AxisOS' INTEGER,'PrismOS' VARCHAR,'BCOS' DOUBLE,'DecInOS' DOUBLE,'OutOS' INTEGER,'AddOD'"
-                << " DOUBLE,'AddOS' DOUBLE,'SegHeightOD' DOUBLE,'SegHeightOS' DOUBLE,'InsetOD' DOUBLE,'InsetOS' DOUBLE,'TotalInsetOD'"
-                << " DOUBLE,'TotalInsetOS' DOUBLE,'DPDTotal' DOUBLE,'DPDOD' DOUBLE,'DPDOS' DOUBLE,'NPDTotal' DOUBLE,'NPDOD'"
-                << " DOUBLE,'NPDOS' DOUBLE,'EyeBridge' DOUBLE,'Temple' VARCHAR DEFAULT (null) ,'B' DOUBLE,'ED' DOUBLE,'LensMaterial'"
-                << " VARCHAR,'FrameStyle' VARCHAR,'ColorTrim' VARCHAR,'StraightTop' BOOL,'RoundSegment' BOOL,'TriFocal'"
+                << " VARCHAR,'Cost' DOUBLE,'Status' VARCHAR,'SphereOD' VARCHAR,'CylinderOD' VARCHAR,'AxisOD'"
+                << " VARCHAR,'PrismOD' VARCHAR,'BCOD' VARCHAR,'DecInOD' VARCHAR,'OutOD' VARCHAR,'SphereOS' VARCHAR,'CylinderOS'"
+                << " VARCHAR,'AxisOS' VARCHAR,'PrismOS' VARCHAR,'BCOS' VARCHAR,'DecInOS' VARCHAR,'OutOS' VARCHAR,'AddOD'"
+                << " VARCHAR,'AddOS' VARCHAR,'SegHeightOD' VARCHAR,'SegHeightOS' VARCHAR,'InsetOD' VARCHAR,'InsetOS' VARCHAR,'TotalInsetOD'"
+                << " VARCHAR,'TotalInsetOS' VARCHAR,'DPDTotal' VARCHAR,'DPDOD' VARCHAR,'DPDOS' VARCHAR,'NPDTotal' VARCHAR,'NPDOD'"
+                << " VARCHAR,'NPDOS' VARCHAR,'EyeBridge' VARCHAR,'Temple' VARCHAR DEFAULT (null) ,'B' VARCHAR,'ED' VARCHAR,'LensMaterialLeft'"
+                << " VARCHAR,'LensMaterialRight' VARCHAR, 'FrameStyle' VARCHAR,'ColorTrim' VARCHAR,'StraightTop' BOOL,'RoundSegment' BOOL,'TriFocal'"
                 << " BOOL DEFAULT (null) ,'Blended' BOOL,'Progressive' BOOL,'Executive' BOOL,'UVProtection' BOOL,'ScratchCoat'"
                 << " BOOL,'HighIndex' BOOL,'AntiReflective' BOOL,'PGX' BOOL,'Transition' BOOL,'Tint' VARCHAR,'Account' INTEGER,'Type'"
-                << " VARCHAR,'Balance' INTEGER,'Notes' VARCHAR,'Lens' DOUBLE,'Frame' DOUBLE, 'Deposit' INTEGER, 'Payment' INTEGER)";
+                << " VARCHAR,'Balance' INTEGER,'Notes' VARCHAR,'LensLeft' DOUBLE,'LensRight' DOUBLE ,'Frame' DOUBLE, 'Deposit' INTEGER, 'Payment'"
+                << " INTEGER, 'Discount' DOUBLE)";
 
     qry->prepare(queryString);
 
@@ -136,7 +143,8 @@ void NewAccount::on_commandLinkButton_clicked()
     else
     {
         this->hide();
-        customerProfile *customerprofile = new customerProfile(0, newAccount, Last, First, Phone, Address1, Address2);
+        customerProfile *customerprofile = new customerProfile(0,
+                          newAccount, Last, First, Phone, Address1, Address2, globalName);
         customerprofile->setup();
         customerprofile->setModal(true);
         customerprofile->show();
@@ -144,6 +152,7 @@ void NewAccount::on_commandLinkButton_clicked()
 
     conn.connClose();
     thisClient->link();
+    thisClient->hide();
 }
 
 void NewAccount::optimize()

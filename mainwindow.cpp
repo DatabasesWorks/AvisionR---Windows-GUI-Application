@@ -6,41 +6,80 @@
 #include "usermanagement.h"
 #include <QDateTime>
 #include "database.h"
+#include "frames.h"
+#include "lens.h"
+#include "log.h"
 
-MainWindow::MainWindow(QWidget *parent, QString empID) :
+MainWindow::MainWindow(QWidget *parent, QString empID, QString name, bool admin, QString target) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
     currentEmpID = empID;
+    globalName = name;
+    isAdmin = admin;
+    thisTarget = target;
+
+
+
+    if(!admin)
+    {
+        ui->pushButton_Log->setVisible(false);
+        ui->label_Log->setVisible(false);
+
+        ui->pushButton_Users->setVisible(false);
+        ui->label_Users->setVisible(false);
+
+        ui->pushButton_Settings->setVisible(false);
+        ui->label_Settings->setVisible(false);
+    }
 
     this->setStyleSheet("background-color: #262626;");
 
-    QPixmap pix("C:/Users/Andrew/Dropbox/Computer Science/Projects/ARVision/pixMap/logout_icon.png");
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    QPixmap pix("pixMap/logout_icon.png");
     QIcon icon(pix);
     ui->pushButton_Logout->setIcon(icon);
     ui->pushButton_Logout->setIconSize(pix.size());
 
-    QPixmap pix2("C:/Users/Andrew/Dropbox/Computer Science/Projects/ARVision/pixMap/customers_Icon.png");
+    QPixmap pix2("pixMap/customers_Icon.png");
     QIcon icon2(pix2);
     ui->pushButton_Customers->setIcon(icon2);
     ui->pushButton_Customers->setIconSize(pix2.size());
 
-    QPixmap pix3("C:/Users/Andrew/Dropbox/Computer Science/Projects/ARVision/pixMap/settings.png");
+    QPixmap pix3("pixMap/settings.png");
     QIcon icon3(pix3);
     ui->pushButton_Settings->setIcon(icon3);
     ui->pushButton_Settings->setIconSize(pix3.size());
 
-    QPixmap pix4("C:/Users/Andrew/Dropbox/Computer Science/Projects/ARVision/pixMap/users.png");
+    QPixmap pix4("pixMap/users.png");
     QIcon icon4(pix4);
     ui->pushButton_Users->setIcon(icon4);
     ui->pushButton_Users->setIconSize(pix4.size());
 
-    QPixmap pix5("C:/Users/Andrew/Dropbox/Computer Science/Projects/ARVision/pixMap/clock.png");
+    QPixmap pix5("pixMap/clock.png");
     QIcon icon5(pix5);
     ui->pushButton_ClockOut->setIcon(icon5);
     ui->pushButton_ClockOut->setIconSize(pix5.size());
+
+    QPixmap pix6("pixMap/log.png");
+    QIcon icon6(pix6);
+    ui->pushButton_Log->setIcon(icon6);
+    ui->pushButton_Log->setIconSize(pix6.size());
+
+    QPixmap pix7("pixMap/frames.png");
+    QIcon icon7(pix7);
+    ui->pushButton_Frames->setIcon(icon7);
+    ui->pushButton_Frames->setIconSize(pix7.size());
+
+    QPixmap pix8("pixMap/lens.png");
+    QIcon icon8(pix8);
+    ui->pushButton_Lens->setIcon(icon8);
+    ui->pushButton_Lens->setIconSize(pix8.size());
 
 }
 
@@ -59,7 +98,7 @@ void MainWindow::on_pushButton_Logout_clicked()
 
 void MainWindow::on_pushButton_Customers_clicked()
 {
-    Customers *customers = new Customers();
+    Customers *customers = new Customers(0, globalName);
     customers->setModal(true);
     customers->show();
 }
@@ -160,4 +199,27 @@ void MainWindow::on_pushButton_ClockOut_clicked()
 
     Login *login = new Login();
     login->show();
+}
+
+void MainWindow::on_pushButton_Frames_clicked()
+{
+    Frames *frames = new Frames(0, true);
+    frames->setModal(true);
+    frames->show();
+}
+
+void MainWindow::on_pushButton_Lens_clicked()
+{
+    Lens *lens = new Lens(0, true);
+    lens->setModal(true);
+    lens->show();
+}
+
+void MainWindow::on_pushButton_Log_clicked()
+{
+    Log *log = new Log(0, globalName);
+    log->setModal(true);
+    log->setup();
+    log->show();
+
 }

@@ -13,11 +13,12 @@ class NewAccount : public QDialog
     Q_OBJECT
 
 public:
-    explicit NewAccount(QWidget *parent = 0, Customers *client = new Customers());
+    explicit NewAccount(QWidget *parent = 0, Customers *client = new Customers(), QString name = "");
     ~NewAccount();
 
-    qint32 newAccount = 0;
+    qint32 newAccount;
     Customers *thisClient;
+    QString globalName;
 
     void optimize();
 

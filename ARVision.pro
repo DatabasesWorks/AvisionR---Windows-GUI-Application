@@ -11,9 +11,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = ARVision
 TEMPLATE = app
 
+QTPLUGIN += windowsprintersupport
 
 SOURCES += main.cpp\
-        source.cpp \
     database.cpp \
     login.cpp \
     mainwindow.cpp \
@@ -31,10 +31,18 @@ SOURCES += main.cpp\
     labprint.cpp \
     usermanagement.cpp \
     selectuser.cpp \
-    newuser.cpp
+    newuser.cpp \
+    modifyprofile.cpp \
+    frames.cpp \
+    newframes.cpp \
+    editframe.cpp \
+    lens.cpp \
+    newlens.cpp \
+    editlens.cpp \
+    log.cpp \
+    manual.cpp
 
-HEADERS  += source.h \
-    database.h \
+HEADERS  += database.h \
     login.h \
     mainwindow.h \
     customers.h \
@@ -51,10 +59,18 @@ HEADERS  += source.h \
     labprint.h \
     usermanagement.h \
     selectuser.h \
-    newuser.h
+    newuser.h \
+    modifyprofile.h \
+    frames.h \
+    newframes.h \
+    editframe.h \
+    lens.h \
+    newlens.h \
+    editlens.h \
+    log.h \
+    manual.h
 
-FORMS    += source.ui \
-    login.ui \
+FORMS    += login.ui \
     mainwindow.ui \
     customers.ui \
     mainsettings.ui \
@@ -70,4 +86,13 @@ FORMS    += source.ui \
     labprint.ui \
     usermanagement.ui \
     selectuser.ui \
-    newuser.ui
+    newuser.ui \
+    modifyprofile.ui \
+    frames.ui \
+    newframes.ui \
+    editframe.ui \
+    lens.ui \
+    newlens.ui \
+    editlens.ui \
+    log.ui \
+    manual.ui

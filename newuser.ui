@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>AvisionR - New User</string>
   </property>
   <property name="styleSheet">
    <string notr="true">color:rgb(255, 255, 255);
@@ -257,6 +257,16 @@ background-color: #262626;</string>
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_username</tabstop>
+  <tabstop>lineEdit_password</tabstop>
+  <tabstop>lineEdit_position</tabstop>
+  <tabstop>lineEdit_hourlySalary</tabstop>
+  <tabstop>checkBox_admin</tabstop>
+  <tabstop>commandLinkButton_cancel</tabstop>
+  <tabstop>commandLinkButton_save</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

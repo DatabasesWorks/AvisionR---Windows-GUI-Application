@@ -10,7 +10,9 @@ UserManagement::UserManagement(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
 }
 
 void UserManagement::setup()
@@ -61,7 +63,7 @@ void UserManagement::on_tableView_Users_doubleClicked(const QModelIndex &index)
     QString name = index.sibling(row, 0).data(Qt::DisplayRole).toString();
     QString id = index.sibling(row, 1).data(Qt::DisplayRole).toString();
 
-    SelectUser *selectUser = new SelectUser(0, name, id);
+    SelectUser *selectUser = new SelectUser(0, name, id, this);
     selectUser->setModal(true);
     selectUser->show();
 }

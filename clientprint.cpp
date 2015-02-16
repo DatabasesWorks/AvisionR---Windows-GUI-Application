@@ -26,7 +26,7 @@ ClientPrint::ClientPrint(QWidget *parent, qint32 transaction, QString date,
 
     QSqlQueryModel * model = new QSqlQueryModel();
 
-    queryStream << "SELECT Description, Status, Frame, Lens, Cost from '" << account << "' WHERE \"Transaction\" = " << transaction;
+    queryStream << "SELECT Description, Status, Frame, LensLeft, LensRight, Cost from '" << account << "' WHERE \"Transaction\" = " << transaction;
 
     qry->prepare(queryString);
 
@@ -49,29 +49,32 @@ ClientPrint::ClientPrint(QWidget *parent, qint32 transaction, QString date,
 
     if(!qry->exec())
     {
-        QMessageBox::critical(this, tr("Error"), qry->lastError().text());
+        QMessageBox::critical(this, tr("Error"), qry->lastError().text() = " in Setup");
     }
     else
     {
         while(qry->next())
         {
-            ui->label_balance->setText(qry->value(55).toString());
-            ui->label_balance_2->setText(qry->value(55).toString());
-            ui->label_total->setText(qry->value(3).toString());
+            QString total = QString::number(qry->value(3).toInt() + qry->value(63).toInt());
+            ui->label_balance->setText(qry->value(56).toString());
+            ui->label_balance_2->setText(qry->value(56).toString());
+            ui->label_total->setText(total);
+            ui->label_subtotal->setText(qry->value(3).toString());
+            ui->label_discount->setText(qry->value(63).toString());
 
-            if(qry->value(59).toString() == "")
+            if(qry->value(61).toString() == "")
                 ui->label_deposit->setText("0");
             else
                 ui->label_deposit->setText(qry->value(59).toString());
 
-            if(qry->value(60).toString() == "")
+            if(qry->value(62).toString() == "")
                 ui->label_payment->setText("0");
             else
                 ui->label_payment->setText(qry->value(60).toString());
         }
     }
 
-    ui->tableView_History->setColumnWidth(0, 360);
+    ui->tableView_History->setColumnWidth(0, 260);
     ui->tableView_History->horizontalHeader()->setStretchLastSection(true);
 
     {
@@ -90,7 +93,7 @@ ClientPrint::ClientPrint(QWidget *parent, qint32 transaction, QString date,
 
     if(!qry->exec())
     {
-        QMessageBox::critical(this, tr("Error"), qry->lastError().text());
+        QMessageBox::critical(this, tr("Error"), qry->lastError().text() + " in Phone");
     }
     else
     {

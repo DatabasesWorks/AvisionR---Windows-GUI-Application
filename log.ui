@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Log</class>
+ <widget class="QDialog" name="Log">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>897</width>
+    <height>658</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AvisionR - Log</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color:rgb(255, 255, 255);
+background-color: #262626;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="minimumSize">
+        <size>
+         <width>15</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>To:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateTimeEdit" name="dateTimeEdit_To">
+       <property name="minimumSize">
+        <size>
+         <width>115</width>
+         <height>18</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="2" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QComboBox" name="comboBox_Users">
+       <property name="minimumSize">
+        <size>
+         <width>108</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_Description">
+       <property name="minimumSize">
+        <size>
+         <width>108</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid #686868;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Description</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="minimumSize">
+        <size>
+         <width>28</width>
+         <height>18</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>From:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateTimeEdit" name="dateTimeEdit_From">
+       <property name="minimumSize">
+        <size>
+         <width>115</width>
+         <height>18</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="3" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QCommandLinkButton" name="commandLinkButton_Manual">
+       <property name="text">
+        <string>Manual</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCommandLinkButton" name="commandLinkButton_Print">
+       <property name="text">
+        <string>Print</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEdit_Transaction">
+     <property name="minimumSize">
+      <size>
+       <width>71</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>71</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #686868;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Transaction</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QCommandLinkButton" name="commandLinkButton_Clear">
+     <property name="text">
+      <string>Clear</string>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <widget class="QCommandLinkButton" name="commandLinkButton_Search">
+     <property name="text">
+      <string>Search</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEdit_Client">
+     <property name="minimumSize">
+      <size>
+       <width>71</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>71</width>
+       <height>16</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #686868;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Client</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="5">
+    <widget class="QTableView" name="tableView_Log">
+     <property name="styleSheet">
+      <string notr="true">QHeaderView::section {
+background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #616161, stop: 0.5 #505050,
+                                       stop: 0.6 #434343, stop:1 #656565);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #6c6c6c;
+
+}
+
+QTableCornerButton::section 
+{
+	background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #616161, stop: 0.5 #505050,
+                                       stop: 0.6 #434343, stop:1 #656565);
+     color: white;
+     padding-left: 4px;
+     border: 1px solid #6c6c6c;
+}
+
+color:rgb(255, 255, 255);
+background-color: #262626;
+</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>tableView_Log</zorder>
+  <zorder>lineEdit_Transaction</zorder>
+  <zorder>lineEdit_Client</zorder>
+  <zorder>lineEdit_Description</zorder>
+  <zorder>comboBox_Users</zorder>
+  <zorder>commandLinkButton_Search</zorder>
+  <zorder>commandLinkButton_Clear</zorder>
+  <zorder>commandLinkButton_Print</zorder>
+  <zorder>commandLinkButton_Manual</zorder>
+  <zorder>dateTimeEdit_From</zorder>
+  <zorder>dateTimeEdit_To</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>lineEdit_Client</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

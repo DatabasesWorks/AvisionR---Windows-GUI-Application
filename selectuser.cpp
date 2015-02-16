@@ -7,6 +7,11 @@ SelectUser::SelectUser(QWidget *parent, QString name, QString id, UserManagement
     ui(new Ui::SelectUser)
 {
     ui->setupUi(this);
+
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
     ui->label_id->setText(id);
     thisUser = user;
 
@@ -73,7 +78,7 @@ void SelectUser::on_commandLinkButton_update_clicked()
                 << "', Admin = '" << admin
                 << "', 'Pay Rate' = '" << ui->lineEdit_hourlySalary->text()
                 << "', Position = '" << ui->lineEdit_position->text() << "'"
-                << "WHERE ID = '" << ui->label_id->text() << "'";
+                << " WHERE ID = '" << ui->label_id->text() << "'";
 
     qry->prepare(queryString);
 
@@ -88,5 +93,79 @@ void SelectUser::on_commandLinkButton_update_clicked()
     }
 
     thisUser->setup();
+    this->hide();
+}
+
+void SelectUser::on_commandLinkButton_delete_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "AvisionR - Delete",
+                                  "Are you sure you want to DELETE this Employee from your Database?", QMessageBox::Yes|QMessageBox::No);
+    if(reply == QMessageBox::Yes)
+    {
+        {
+            Database conn;
+            if(!conn.connOpen("Employee"))
+            {
+                qDebug()<<"Failed to open Data";
+                return;
+            }
+
+            QSqlQuery * qry = new QSqlQuery(conn.mydb);
+
+            QString queryString;
+            QTextStream queryStream(&queryString);
+
+            queryStream << "DELETE FROM Employees WHERE ID = '" << ui->label_id->text() << "'";
+
+            qry->prepare(queryString);
+
+            if(qry->exec())
+            {}
+            else
+            {
+                QMessageBox::critical(this, tr("Error"), qry->lastError().text());
+            }
+
+            conn.connClose();
+        }
+
+        {
+            Database conn;
+            if(!conn.connOpen("Clock"))
+            {
+                qDebug()<<"Failed to open Data";
+                return;
+            }
+
+            QSqlQuery * qry = new QSqlQuery(conn.mydb);
+
+            QString queryString;
+            QTextStream queryStream(&queryString);
+
+            queryStream << "DROP TABLE '" << ui->label_id->text() << "'";
+
+            qry->prepare(queryString);
+
+            if(qry->exec())
+            {
+                thisUser->setup();
+                QMessageBox::information(this, tr("AvisionR - Delete"), "Employee Deleted");
+            }
+            else
+            {
+                QMessageBox::critical(this, tr("Error"), qry->lastError().text());
+            }
+
+            conn.connClose();
+        }
+
+
+        this->hide();
+    }
+}
+
+void SelectUser::on_commandLinkButton_cancel_clicked()
+{
     this->hide();
 }

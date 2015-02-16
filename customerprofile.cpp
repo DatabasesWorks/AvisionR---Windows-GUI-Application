@@ -3,14 +3,20 @@
 #include "database.h"
 #include "spectacles.h"
 #include "newpurchase.h"
+#include "modifyprofile.h"
 
 customerProfile::customerProfile(QWidget *parent, qint32 account, QString Last, QString First, QString Phone,
-                                 QString Address1, QString Address2) :
+                                 QString Address1, QString Address2, QString name) :
     QDialog(parent),
     ui(new Ui::customerProfile)
 {
     ui->setupUi(this);
 
+    QPixmap windowIconPix("/pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    globalName = name;
     ui->label_addressLine1->setText(Address1);
     ui->label_addressLine2->setText(Address2);
 
@@ -31,9 +37,6 @@ customerProfile::customerProfile(QWidget *parent, qint32 account, QString Last, 
 void customerProfile :: setup()
 {
     qint32 balance = 0;
-
-
-
     Database conn;
     QSqlQueryModel * model = new QSqlQueryModel();
 
@@ -100,7 +103,8 @@ void customerProfile::on_tableView_History_doubleClicked(const QModelIndex &inde
     QString status = index.sibling(row, 5).data(Qt::DisplayRole).toString();
 
     Spectacles *spectacles = new Spectacles(0, transaction, date, description, total, type, thisLast,
-                                            thisFirst, thisPhone, thisAccount, status, this, thisAddress1, thisAddress2);
+                                            thisFirst, thisPhone, thisAccount, status, this,
+                                            thisAddress1, thisAddress2, globalName);
     spectacles->setModal(true);
     spectacles->show();
 }
@@ -108,7 +112,7 @@ void customerProfile::on_tableView_History_doubleClicked(const QModelIndex &inde
 
 void customerProfile::on_commandLinkButton_newPurchase_clicked()
 {
-    NewPurchase *newPurchase = new NewPurchase(0, thisAddress1, thisAddress2, thisAccount, this);
+    NewPurchase *newPurchase = new NewPurchase(0, thisAddress1, thisAddress2, thisAccount, this, globalName);
     newPurchase->setModal(true);
     newPurchase->setWindowFlags(Qt::Tool | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
     newPurchase->show();
@@ -117,4 +121,11 @@ void customerProfile::on_commandLinkButton_newPurchase_clicked()
 void customerProfile::on_commandLinkButton_3_clicked()
 {
     this->hide();
+}
+
+void customerProfile::on_commandLinkButton_modify_clicked()
+{
+    ModifyProfile *modifyProfile = new ModifyProfile(0, thisAccount, this);
+    modifyProfile->setModal(true);
+    modifyProfile->show();
 }

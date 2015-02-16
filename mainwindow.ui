@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>848</width>
+    <height>760</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>848</width>
+    <height>400</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>AvisionR - Control Panel</string>
@@ -46,38 +52,227 @@ border-bottom: 3.5px outset #535353;
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
-        <widget class="QLabel" name="label_Logout_2">
-         <property name="styleSheet">
-          <string notr="true">color:rgb(255, 255, 255);
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_Logout_2">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
 font: 75 8pt &quot;Vrinda&quot;;
 background-color: none;
 </string>
-         </property>
-         <property name="text">
-          <string>Clients</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
+           </property>
+           <property name="text">
+            <string>Clients</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Customers">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Customers {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Customers:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Customers:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
-       <item row="0" column="1" rowspan="2">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>553</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
+       <item row="0" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_Frames_2">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Lens</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Lens">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Lens {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Lens:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Lens:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
-       <item row="0" column="2" rowspan="2">
+       <item row="0" column="2">
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_Frames">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Frames</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Frames">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Frames {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Frames:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Frames:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="3">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_Log">
+           <property name="styleSheet">
+            <string notr="true">color:rgb(255, 255, 255);
+font: 75 8pt &quot;Vrinda&quot;;
+background-color: none;
+</string>
+           </property>
+           <property name="text">
+            <string>Log</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_Log">
+           <property name="minimumSize">
+            <size>
+             <width>95</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">   QPushButton#pushButton_Log  {
+        background: none;
+		border: none;
+		border-bottom: 3.5px outset #73a0cf;
+    }
+     
+  QPushButton#pushButton_Log:pressed  {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+    }
+     
+QPushButton#pushButton_Log:hover{
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
+} </string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="4">
         <layout class="QVBoxLayout" name="verticalLayout_5">
          <item>
-          <widget class="QLabel" name="label_Logout_4">
+          <widget class="QLabel" name="label_Users">
            <property name="styleSheet">
             <string notr="true">color:rgb(255, 255, 255);
 font: 75 8pt &quot;Vrinda&quot;;
@@ -127,10 +322,10 @@ QPushButton#pushButton_Users:hover{
          </item>
         </layout>
        </item>
-       <item row="0" column="3" rowspan="2">
+       <item row="0" column="5">
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
-          <widget class="QLabel" name="label_Logout_3">
+          <widget class="QLabel" name="label_Settings">
            <property name="styleSheet">
             <string notr="true">color:rgb(255, 255, 255);
 font: 75 8pt &quot;Vrinda&quot;;
@@ -180,7 +375,7 @@ QPushButton#pushButton_Settings:hover{
          </item>
         </layout>
        </item>
-       <item row="0" column="4" rowspan="2">
+       <item row="0" column="6">
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <widget class="QLabel" name="label_Logout">
@@ -233,7 +428,7 @@ QPushButton#pushButton_Logout:hover{
          </item>
         </layout>
        </item>
-       <item row="0" column="5" rowspan="2">
+       <item row="0" column="7">
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
           <widget class="QLabel" name="label_Logout_5">
@@ -285,39 +480,6 @@ QPushButton#pushButton_ClockOut:hover{
           </widget>
          </item>
         </layout>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="pushButton_Customers">
-         <property name="minimumSize">
-          <size>
-           <width>95</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">   QPushButton#pushButton_Customers {
-        background: none;
-		border: none;
-		border-bottom: 3.5px outset #73a0cf;
-    }
-     
-  QPushButton#pushButton_Customers:pressed  {
-        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
-    }
-     
-QPushButton#pushButton_Customers:hover{
-	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                          stop: 0 rgba(0,0,0,0.3), stop: 1 rgba(255,0,0,0));
-} </string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>

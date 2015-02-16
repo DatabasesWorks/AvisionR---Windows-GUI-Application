@@ -153,6 +153,13 @@ background-color: #262626;</string>
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_Area</tabstop>
+  <tabstop>lineEdit_City</tabstop>
+  <tabstop>lineEdit_ZipCode</tabstop>
+  <tabstop>lineEdit_State</tabstop>
+  <tabstop>commandLinkButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

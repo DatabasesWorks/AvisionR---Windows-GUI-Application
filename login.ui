@@ -72,9 +72,6 @@
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>../pixMap/userLogin1.png</pixmap>
-   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -88,15 +85,12 @@
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>../pixMap/passwordLogin.png</pixmap>
-   </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton_Login">
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>350</y>
+     <y>340</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -116,9 +110,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>../pixMap/GradientLogin2.png</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="label_AvisionR">
@@ -175,9 +166,6 @@
    <property name="text">
     <string/>
    </property>
-   <property name="pixmap">
-    <pixmap>../pixMap/eye.png</pixmap>
-   </property>
   </widget>
   <widget class="QLabel" name="label_Status">
    <property name="geometry">
@@ -188,8 +176,14 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="text">
-    <string>Status...</string>
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <zorder>label_3</zorder>

@@ -8,6 +8,13 @@ MainSettings::MainSettings(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    ui->comboBox_Database->addItem("Pomona");
+    ui->comboBox_Database->addItem("Fontana");
+
     {
     Database conn;
     conn.connOpen("Master");
@@ -86,5 +93,42 @@ void MainSettings::on_commandLinkButton_save_clicked()
     conn.connClose();
     }
 
+    this->hide();
+}
+
+void MainSettings::on_commandLinkButton_Apply_clicked()
+{
+    QString database = ui->comboBox_Database->currentText();
+    {
+    Database conn;
+    conn.connOpen("Main");
+
+    QSqlQuery * qry = new QSqlQuery(conn.mydb);
+
+    QString queryString;
+    QTextStream queryStream(&queryString);
+
+    queryStream << "UPDATE 'Main'"
+                << " SET Target = '" << database << "'";
+
+    qry->prepare(queryString);
+    if(!qry->exec())
+    {
+        QMessageBox::critical(this, tr("Error"), qry->lastError().text());
+    }
+    else
+    {
+        QMessageBox::information(this, tr("AvisionR - Database"), "Database is now set to " + database);
+        this->hide();
+    }
+
+    conn.connClose();
+    }
+
+
+}
+
+void MainSettings::on_commandLinkButton_Cancel_clicked()
+{
     this->hide();
 }

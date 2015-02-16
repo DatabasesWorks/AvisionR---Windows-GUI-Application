@@ -22,6 +22,10 @@ private slots:
 
     void on_commandLinkButton_save_clicked();
 
+    void on_commandLinkButton_Apply_clicked();
+
+    void on_commandLinkButton_Cancel_clicked();
+
 private:
     Ui::MainSettings *ui;
 };

@@ -9,12 +9,17 @@
 
 Spectacles::Spectacles(QWidget *parent, qint32 transaction, QString date, QString description, int total, QString type,
                        QString Last, QString First, QString Phone, qint32 account, QString status, customerProfile *profile,
-                       QString Address1, QString Address2) :
+                       QString Address1, QString Address2, QString name) :
     QDialog(parent),
     ui(new Ui::Spectacles)
 {
     ui->setupUi(this);
 
+    QPixmap windowIconPix("pixMap/eye.png");
+    QIcon windowIcon(windowIconPix);
+    this->setWindowIcon(windowIcon);
+
+    globalName = name;
     thisStatus = status;
     thisAccount = account;
     thisTransaction = QString::number(transaction);
@@ -31,6 +36,21 @@ Spectacles::Spectacles(QWidget *parent, qint32 transaction, QString date, QStrin
 
     thisProfile = profile;
 
+    if(type == "Custom")
+    {
+        ui->label_LensMaterialLeft->setText("Item 1");
+        ui->label_FrameStyle->setText("Item 2");
+        ui->lineEdit_LensMaterialRight->setEnabled(false);
+
+        ui->label_LensPrice_2->setText("Item 1  $");
+        ui->label_FramePrice->setText("Item 2  $");
+        ui->lineEdit_LensRight->setEnabled(false);
+    }
+
+    else if(type == "Contacts")
+    {
+        setWindowTitle("AvisionR - Contacts");
+    }
     Database conn;
     conn.connOpen("customersDetail");
     QSqlQuery * qry = new QSqlQuery(conn.mydb);
@@ -82,30 +102,33 @@ Spectacles::Spectacles(QWidget *parent, qint32 transaction, QString date, QStrin
             ui->lineEdit_Temple->setText(qry->value(34).toString());
             ui->lineEdit_B->setText(qry->value(35).toString());
             ui->lineEdit_ED->setText(qry->value(36).toString());
-            ui->lineEdit_LensMaterial->setText(qry->value(37).toString());
-            ui->lineEdit_FrameStyle ->setText(qry->value(38).toString());
-            ui->lineEdit_ColorTrim->setText(qry->value(39).toString());
+            ui->lineEdit_LensMaterialLeft->setText(qry->value(37).toString());
+            ui->lineEdit_LensMaterialRight->setText(qry->value(38).toString());
+            ui->lineEdit_FrameStyle ->setText(qry->value(39).toString());
+            ui->lineEdit_ColorTrim->setText(qry->value(40).toString());
 
-            ui->checkBox_StraightTop->setChecked(qry->value(40).toBool());
-            ui->checkBox_RoundSegment->setChecked(qry->value(41).toBool());
-            ui->checkBox_TriFocal->setChecked(qry->value(42).toBool());
-            ui->checkBox_Blended->setChecked(qry->value(43).toBool());
-            ui->checkBox_Progressive->setChecked(qry->value(44).toBool());
-            ui->checkBox_Executive->setChecked(qry->value(45).toBool());
-            ui->checkBox_UVProtection->setChecked(qry->value(46).toBool());
-            ui->checkBox_ScratchCoat->setChecked(qry->value(47).toBool());
-            ui->checkBox_HighIndex->setChecked(qry->value(48).toBool());
-            ui->checkBox_AntiReflective->setChecked(qry->value(49).toBool());
-            ui->checkBox_PGX->setChecked(qry->value(50).toBool());
-            ui->checkBox_Transition->setChecked(qry->value(51).toBool());
+            ui->checkBox_StraightTop->setChecked(qry->value(41).toBool());
+            ui->checkBox_RoundSegment->setChecked(qry->value(42).toBool());
+            ui->checkBox_TriFocal->setChecked(qry->value(43).toBool());
+            ui->checkBox_Blended->setChecked(qry->value(44).toBool());
+            ui->checkBox_Progressive->setChecked(qry->value(45).toBool());
+            ui->checkBox_Executive->setChecked(qry->value(46).toBool());
+            ui->checkBox_UVProtection->setChecked(qry->value(47).toBool());
+            ui->checkBox_ScratchCoat->setChecked(qry->value(48).toBool());
+            ui->checkBox_HighIndex->setChecked(qry->value(49).toBool());
+            ui->checkBox_AntiReflective->setChecked(qry->value(50).toBool());
+            ui->checkBox_PGX->setChecked(qry->value(51).toBool());
+            ui->checkBox_Transition->setChecked(qry->value(52).toBool());
 
-            ui->lineEdit_Tint->setText(qry->value(52).toString());
+            ui->lineEdit_Tint->setText(qry->value(53).toString());
 
-            balance = qry->value(55).toInt();
+            balance = qry->value(56).toInt();
             ui->lineEdit_Balance->setText(QString::number(balance));
-            ui->textEdit_Notes->setText(qry->value(56).toString());
-            ui->lineEdit_Lens->setText(qry->value(57).toString());
-            ui->lineEdit_Frame->setText(qry->value(58).toString());
+            ui->textEdit_Notes->setText(qry->value(57).toString());
+            ui->lineEdit_LensLeft->setText(qry->value(58).toString());
+            ui->lineEdit_LensRight->setText(qry->value(59).toString());
+            ui->lineEdit_Frame->setText(qry->value(60).toString());
+            ui->lineEdit_Discount->setText(qry->value(63).toString());
         }
     }
 }
@@ -183,7 +206,8 @@ void Spectacles::on_commandLinkButton_update_clicked()
                 << "', Temple = '" << Temple
                 << "', B = '" << ui->lineEdit_B->text()
                 << "', ED = '" << ui->lineEdit_ED->text()
-                << "', LensMaterial = '" << ui->lineEdit_LensMaterial->text()
+                << "', LensMaterialLeft = '" << ui->lineEdit_LensMaterialLeft->text()
+                << "', LensMaterialRight = '" << ui->lineEdit_LensMaterialRight->text()
                 << "', FrameStyle = '" << ui->lineEdit_FrameStyle->text()
 
                 << "', ColorTrim = '" << ui->lineEdit_ColorTrim->text()
@@ -218,13 +242,105 @@ void Spectacles::on_commandLinkButton_update_clicked()
     }
     else
     {
+
+    }
+
+    conn.connClose();
+
+    QDateTime current = current.currentDateTime();
+    QString timeStamp = current.toString("yyyy-MM-dd HH:mm:ss");
+
+    QString lensMaterialLeft = ui->lineEdit_LensMaterialLeft->text();
+    QString lensMaterialRight = ui->lineEdit_LensMaterialRight->text();
+    QString frameStyle = ui->lineEdit_FrameStyle->text();
+    QString description;
+
+    if(lensMaterialLeft == lensMaterialRight)
+        description = lensMaterialLeft + " " + frameStyle;
+    else
+        description = lensMaterialLeft + " " + lensMaterialRight + " " + frameStyle;
+
+    qint32 newLog = 0;
+    {
+
+    qint32 log = 0;
+    Database conn;
+    conn.connOpen("Master");
+
+    QSqlQuery * qry = new QSqlQuery(conn.mydb);
+
+    QString queryString;
+    QTextStream queryStream(&queryString);
+
+    queryStream << "Select * from mastertable";
+
+    qry->prepare(queryString);
+
+    if(!qry->exec())
+    {
+        QMessageBox::critical(this, tr("Error"), qry->lastError().text() + " 1");
+    }
+    else
+    {
+        while(qry->next())
+        {
+              newLog = qry->value(15).toInt();
+        }
+    }
+    queryString = "";
+    log = newLog + 1;
+    queryStream << "UPDATE mastertable"
+                << " SET Log = '" << log << "'";
+
+    qry->prepare(queryString);
+
+    if(!qry->exec())
+    {
+        QMessageBox::critical(this, tr("Error"), "SECOND " + qry->lastError().text() + " 2");
+    }
+    else
+    {}
+
+    conn.connClose();
+    }
+
+    {
+    Database conn;
+    conn.connOpen("Log");
+
+    QSqlQuery * qry = new QSqlQuery(conn.mydb);
+
+    QString queryString;
+    QTextStream queryStream(&queryString);
+
+    queryStream << "INSERT INTO Log ('#', \"Date/Time\", User, \"Transaction\", Client, Description,"
+                << " Type, \"+/-\", Amount) "
+                << "VALUES ('"
+                << newLog << "', '"
+                << timeStamp << "', '"
+                << globalName << "', '"
+                << ui->label_Transaction->text() << "', '"
+                << thisAccount << "', '"
+                << description << "', '"
+                << "Payment" << "', '"
+                << "+" << "', '"
+                << depositPayment << "')";
+
+    qry->prepare(queryString);
+
+    if(!qry->exec())
+    {
+        QMessageBox::critical(this, tr("Error"), qry->lastError().text() + " 3");
+    }
+    else
+    {
         QMessageBox::information(this, tr("AvisionR - Spectacles"), "Update Successful");
         thisProfile->setup();
         this->hide();
     }
 
     conn.connClose();
-
+    }
 
 }
 

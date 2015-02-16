@@ -13,10 +13,11 @@ class customerProfile : public QDialog
 
 public:
     explicit customerProfile(QWidget *parent = 0, qint32 account = 0, QString Last = "",
-                             QString First = "", QString Phone = "", QString Address1 = "", QString Address2 = "");
+                             QString First = "", QString Phone = "", QString Address1 = "",
+                             QString Address2 = "", QString name = "");
     ~customerProfile();
 
-    QString thisLast, thisFirst, thisPhone, thisAddress1, thisAddress2;
+    QString thisLast, thisFirst, thisPhone, thisAddress1, thisAddress2, globalName;
     qint32 thisAccount;
     void setup();
 
@@ -26,6 +27,9 @@ private slots:
     void on_commandLinkButton_newPurchase_clicked();
 
     void on_commandLinkButton_3_clicked();
+
+
+    void on_commandLinkButton_modify_clicked();
 
 private:
     Ui::customerProfile *ui;

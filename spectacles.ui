@@ -7,16 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>522</width>
-    <height>665</height>
+    <height>757</height>
    </rect>
   </property>
   <property name="minimumSize">
-   <size>
-    <width>522</width>
-    <height>665</height>
-   </size>
-  </property>
-  <property name="maximumSize">
    <size>
     <width>522</width>
     <height>665</height>
@@ -1758,10 +1752,10 @@ background-color: #262626;</string>
   <widget class="QGroupBox" name="groupBox_5">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>480</y>
-     <width>361</width>
-     <height>121</height>
+     <x>170</x>
+     <y>520</y>
+     <width>341</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -1775,8 +1769,8 @@ background-color: #262626;</string>
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>341</width>
-      <height>91</height>
+      <width>321</width>
+      <height>121</height>
      </rect>
     </property>
    </widget>
@@ -2726,655 +2720,11 @@ background-color: #262626;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>390</y>
-     <width>250</width>
-     <height>77</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
-     <widget class="QFrame" name="frame_28">
-      <property name="minimumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #686868;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QWidget" name="layoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>317</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="0">
-         <widget class="QFrame" name="frame_29">
-          <property name="minimumSize">
-           <size>
-            <width>71</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>71</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: #686868;</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <widget class="QLabel" name="label_68">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>0</y>
-             <width>61</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>61</width>
-             <height>21</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>61</width>
-             <height>21</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Frame Style</string>
-           </property>
-          </widget>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLabel" name="label_64">
-          <property name="minimumSize">
-           <size>
-            <width>61</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>61</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>Frame Style</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QLineEdit" name="lineEdit_35">
-          <property name="minimumSize">
-           <size>
-            <width>171</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>171</width>
-            <height>21</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border: 1px solid #686868;</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit_FrameStyle">
-      <property name="minimumSize">
-       <size>
-        <width>171</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>171</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid #686868;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QFrame" name="frame_30">
-      <property name="minimumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #686868;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QLabel" name="label_69">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>61</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>61</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>61</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Frame Style</string>
-       </property>
-      </widget>
-      <widget class="QFrame" name="frame_32">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>71</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>71</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>71</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: #686868;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QLabel" name="label_70">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>0</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>61</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>61</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Color &amp; Trim</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_37">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>0</y>
-         <width>171</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>171</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>171</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: 1px solid #686868;</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_ColorTrim">
-      <property name="minimumSize">
-       <size>
-        <width>171</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>171</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid #686868;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QFrame" name="frame_33">
-      <property name="minimumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #686868;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QLabel" name="label_71">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>61</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>61</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>61</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Frame Style</string>
-       </property>
-      </widget>
-      <widget class="QFrame" name="frame_34">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>71</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>71</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>71</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: #686868;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QLabel" name="label_72">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>0</y>
-          <width>41</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>41</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>41</width>
-          <height>21</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Tint</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_40">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>0</y>
-         <width>171</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>171</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>171</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: 1px solid #686868;</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_Tint">
-      <property name="minimumSize">
-       <size>
-        <width>171</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>171</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid #686868;</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QLabel" name="label_27">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>490</y>
-     <width>46</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <underline>false</underline>
-    </font>
-   </property>
-   <property name="text">
-    <string>Lens $</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_28">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>520</y>
-     <width>46</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <underline>false</underline>
-    </font>
-   </property>
-   <property name="text">
-    <string>Frame $</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_29">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>550</y>
-     <width>46</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <underline>false</underline>
-    </font>
-   </property>
-   <property name="text">
-    <string>Total $</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_Lens">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>490</y>
-     <width>61</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid #686868;
-color: gray;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_Frame">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>520</y>
-     <width>61</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid #686868;
-color: gray;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_Total">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>550</y>
-     <width>61</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid #686868;
-color: gray;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_Balance">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>580</y>
-     <width>61</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>61</width>
-     <height>21</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid #686868;
-color: gray;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_30">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>580</y>
-     <width>46</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <underline>false</underline>
-    </font>
-   </property>
-   <property name="text">
-    <string>Balance $</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_31">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>610</y>
+     <y>690</y>
      <width>101</width>
      <height>16</height>
     </rect>
@@ -3393,7 +2743,7 @@ color: gray;</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>630</y>
+     <y>710</y>
      <width>61</width>
      <height>21</height>
     </rect>
@@ -3418,7 +2768,7 @@ color: gray;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>630</y>
+     <y>710</y>
      <width>16</width>
      <height>16</height>
     </rect>
@@ -3437,7 +2787,7 @@ color: gray;</string>
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>610</y>
+     <y>690</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -3445,12 +2795,15 @@ color: gray;</string>
    <property name="text">
     <string>Update</string>
    </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton_print">
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>610</y>
+     <y>690</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -3458,12 +2811,15 @@ color: gray;</string>
    <property name="text">
     <string>Print</string>
    </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton_cancel">
    <property name="geometry">
     <rect>
      <x>430</x>
-     <y>610</y>
+     <y>690</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -3471,19 +2827,194 @@ color: gray;</string>
    <property name="text">
     <string>Cancel</string>
    </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QCommandLinkButton" name="commandLinkButton_delete">
    <property name="geometry">
     <rect>
-     <x>21</x>
-     <y>331</y>
-     <width>251</width>
-     <height>50</height>
+     <x>250</x>
+     <y>690</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_FrameStyle">
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>452</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid #686868;</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame_52">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>452</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>71</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>71</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="layoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>317</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_8">
+     <item row="0" column="0">
+      <widget class="QFrame" name="frame_53">
+       <property name="minimumSize">
+        <size>
+         <width>71</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>71</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #686868;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="label_FrameStyle">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>61</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Frame Style</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_82">
+       <property name="minimumSize">
+        <size>
+         <width>61</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>61</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Frame Style</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="lineEdit_36">
+       <property name="minimumSize">
+        <size>
+         <width>171</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>171</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid #686868;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>18</x>
+     <y>341</y>
+     <width>237</width>
+     <height>104</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
-     <widget class="QFrame" name="frame_23">
+     <widget class="QFrame" name="frame_31">
       <property name="minimumSize">
        <size>
         <width>61</width>
@@ -3505,7 +3036,7 @@ color: gray;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="label_55">
+      <widget class="QLabel" name="label_56">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -3533,57 +3064,7 @@ color: gray;</string>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QFrame" name="frame_24">
-      <property name="minimumSize">
-       <size>
-        <width>41</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>41</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #686868;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QLabel" name="label_59">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>61</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>61</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>61</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Temple</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QFrame" name="frame_25">
+     <widget class="QFrame" name="frame_36">
       <property name="minimumSize">
        <size>
         <width>21</width>
@@ -3605,7 +3086,7 @@ color: gray;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="label_60">
+      <widget class="QLabel" name="label_65">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3632,17 +3113,17 @@ color: gray;</string>
       </widget>
      </widget>
     </item>
-    <item row="0" column="3">
-     <widget class="QFrame" name="frame_26">
+    <item row="0" column="2">
+     <widget class="QFrame" name="frame_38">
       <property name="minimumSize">
        <size>
-        <width>21</width>
+        <width>141</width>
         <height>21</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>21</width>
+        <width>141</width>
         <height>21</height>
        </size>
       </property>
@@ -3655,73 +3136,29 @@ color: gray;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="label_62">
+      <widget class="QLabel" name="label_LensMaterialLeft">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>30</x>
          <y>0</y>
-         <width>31</width>
+         <width>101</width>
          <height>21</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
-         <width>31</width>
+         <width>101</width>
          <height>21</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>31</width>
+         <width>101</width>
          <height>21</height>
         </size>
        </property>
        <property name="text">
-        <string>ED</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="4">
-     <widget class="QFrame" name="frame_27">
-      <property name="minimumSize">
-       <size>
-        <width>71</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>81</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #686868;</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QLabel" name="label_63">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>81</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>71</width>
-         <height>21</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Lens Material</string>
+        <string>Lens Material Right</string>
        </property>
       </widget>
      </widget>
@@ -3746,25 +3183,6 @@ color: gray;</string>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_Temple">
-      <property name="minimumSize">
-       <size>
-        <width>41</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>41</width>
-        <height>21</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid #686868;</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
      <widget class="QLineEdit" name="lineEdit_B">
       <property name="minimumSize">
        <size>
@@ -3783,7 +3201,195 @@ color: gray;</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="3">
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit_LensMaterialRight">
+      <property name="minimumSize">
+       <size>
+        <width>141</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>141</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #686868;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QFrame" name="frame_35">
+      <property name="minimumSize">
+       <size>
+        <width>61</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>61</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #686868;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_61">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>61</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>61</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Temple</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QFrame" name="frame_37">
+      <property name="minimumSize">
+       <size>
+        <width>21</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>21</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #686868;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_66">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>31</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>31</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>31</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="text">
+        <string> ED</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QFrame" name="frame_58">
+      <property name="minimumSize">
+       <size>
+        <width>141</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>141</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #686868;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_LensMaterialRight">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>101</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>101</width>
+         <height>21</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Lens Material Left</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLineEdit" name="lineEdit_Temple">
+      <property name="minimumSize">
+       <size>
+        <width>61</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>61</width>
+        <height>21</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #686868;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
      <widget class="QLineEdit" name="lineEdit_ED">
       <property name="minimumSize">
        <size>
@@ -3802,17 +3408,17 @@ color: gray;</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="4">
-     <widget class="QLineEdit" name="lineEdit_LensMaterial">
+    <item row="3" column="2">
+     <widget class="QLineEdit" name="lineEdit_LensMaterialLeft">
       <property name="minimumSize">
        <size>
-        <width>71</width>
+        <width>141</width>
         <height>21</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>81</width>
+        <width>141</width>
         <height>21</height>
        </size>
       </property>
@@ -3823,20 +3429,572 @@ color: gray;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QCommandLinkButton" name="commandLinkButton_delete">
+  <widget class="QLineEdit" name="lineEdit_ColorTrim">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>610</y>
-     <width>81</width>
-     <height>41</height>
+     <x>97</x>
+     <y>480</y>
+     <width>171</width>
+     <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Delete</string>
+   <property name="minimumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid #686868;</string>
    </property>
   </widget>
-  <zorder>layoutWidget</zorder>
+  <widget class="QFrame" name="frame_54">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>480</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>71</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>71</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_83">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>61</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>61</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Frame Style</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_55">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>71</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>71</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #686868;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_84">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>61</width>
+       <height>21</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>61</width>
+       <height>21</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Color &amp; Trim</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_38">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>0</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>171</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>171</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #686868;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>520</y>
+     <width>130</width>
+     <height>170</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_LensPrice_2">
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Lens Left $</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_LensLeft">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #686868;
+color: gray;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_LensPrice">
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Lens Right $</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_LensRight">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #686868;
+color: gray;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_FramePrice">
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Frame $</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_Frame">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #686868;
+color: gray;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_FramePrice_2">
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Discount $</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_Discount">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #686868;
+color: gray;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_29">
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Total $</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_Total">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #686868;
+color: gray;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_30">
+        <property name="font">
+         <font>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Balance $</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_Balance">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>61</width>
+          <height>21</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 1px solid #686868;
+color: gray;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="frame_33">
+   <property name="geometry">
+    <rect>
+     <x>293</x>
+     <y>470</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>71</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>71</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_71">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>61</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>61</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Frame Style</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_34">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>71</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>71</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #686868;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_72">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>41</width>
+       <height>21</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>41</width>
+       <height>21</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Tint</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_40">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>0</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>171</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>171</width>
+      <height>21</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #686868;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Tint">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>470</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>171</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid #686868;</string>
+   </property>
+  </widget>
+  <zorder>frame_33</zorder>
+  <zorder>lineEdit_Tint</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
   <zorder>layoutWidget</zorder>
@@ -3882,14 +4040,6 @@ color: gray;</string>
   <zorder>checkBox_PGX</zorder>
   <zorder>checkBox_Progressive</zorder>
   <zorder>groupBox_5</zorder>
-  <zorder>label_27</zorder>
-  <zorder>label_28</zorder>
-  <zorder>label_29</zorder>
-  <zorder>lineEdit_Lens</zorder>
-  <zorder>lineEdit_Frame</zorder>
-  <zorder>lineEdit_Total</zorder>
-  <zorder>lineEdit_Balance</zorder>
-  <zorder>label_30</zorder>
   <zorder>label_31</zorder>
   <zorder>lineEdit_DepositPayment</zorder>
   <zorder>label_32</zorder>
@@ -3897,7 +4047,67 @@ color: gray;</string>
   <zorder>commandLinkButton_print</zorder>
   <zorder>commandLinkButton_cancel</zorder>
   <zorder>commandLinkButton_delete</zorder>
+  <zorder>lineEdit_FrameStyle</zorder>
+  <zorder>frame_52</zorder>
+  <zorder>layoutWidget_3</zorder>
+  <zorder>lineEdit_ColorTrim</zorder>
+  <zorder>frame_54</zorder>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_sphereOD</tabstop>
+  <tabstop>lineEdit_cylinderOD</tabstop>
+  <tabstop>lineEdit_axisOD</tabstop>
+  <tabstop>lineEdit_prismOD</tabstop>
+  <tabstop>lineEdit_BCOD</tabstop>
+  <tabstop>lineEdit_DecInOD</tabstop>
+  <tabstop>lineEdit_OutOD</tabstop>
+  <tabstop>lineEdit_sphereOS</tabstop>
+  <tabstop>lineEdit_cylinderOS</tabstop>
+  <tabstop>lineEdit_axisOS</tabstop>
+  <tabstop>lineEdit_prismOS</tabstop>
+  <tabstop>lineEdit_BCOS</tabstop>
+  <tabstop>lineEdit_DecInOS</tabstop>
+  <tabstop>lineEdit_OutOS</tabstop>
+  <tabstop>lineEdit_AddOD</tabstop>
+  <tabstop>lineEdit_SegHeighOD</tabstop>
+  <tabstop>lineEdit_InsetOD</tabstop>
+  <tabstop>lineEdit_TotalInsetOD</tabstop>
+  <tabstop>lineEdit_DPDTotal</tabstop>
+  <tabstop>lineEdit_DPDOD</tabstop>
+  <tabstop>lineEdit_DPDOS</tabstop>
+  <tabstop>lineEdit_AddOS</tabstop>
+  <tabstop>lineEdit_SegHeightOS</tabstop>
+  <tabstop>lineEdit_InsetOS</tabstop>
+  <tabstop>lineEdit_TotalInsetOS</tabstop>
+  <tabstop>lineEdit_NPDTotal</tabstop>
+  <tabstop>lineEdit_NPDOD</tabstop>
+  <tabstop>lineEdit_NPDOS</tabstop>
+  <tabstop>lineEdit_Tint</tabstop>
+  <tabstop>lineEdit_LensRight</tabstop>
+  <tabstop>lineEdit_Frame</tabstop>
+  <tabstop>lineEdit_Discount</tabstop>
+  <tabstop>lineEdit_DepositPayment</tabstop>
+  <tabstop>checkBox_StraightTop</tabstop>
+  <tabstop>checkBox_RoundSegment</tabstop>
+  <tabstop>checkBox_TriFocal</tabstop>
+  <tabstop>checkBox_Executive</tabstop>
+  <tabstop>checkBox_Blended</tabstop>
+  <tabstop>checkBox_Transition</tabstop>
+  <tabstop>checkBox_UVProtection</tabstop>
+  <tabstop>checkBox_ScratchCoat</tabstop>
+  <tabstop>checkBox_AntiReflective</tabstop>
+  <tabstop>checkBox_PGX</tabstop>
+  <tabstop>commandLinkButton_cancel</tabstop>
+  <tabstop>commandLinkButton_delete</tabstop>
+  <tabstop>textEdit_Notes</tabstop>
+  <tabstop>lineEdit_Total</tabstop>
+  <tabstop>lineEdit_Balance</tabstop>
+  <tabstop>checkBox_Progressive</tabstop>
+  <tabstop>commandLinkButton_update</tabstop>
+  <tabstop>commandLinkButton_print</tabstop>
+  <tabstop>checkBox_HighIndex</tabstop>
+  <tabstop>lineEdit_40</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

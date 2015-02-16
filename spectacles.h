@@ -17,15 +17,17 @@ public:
                         QString description = "", int total = 0.0, QString type = "",
                         QString Last = "", QString First = "", QString Phone = "",
                         qint32 account = 0, QString status = "",
-                        customerProfile *profile = new customerProfile(), QString Address1 = "", QString Address2 = "");
+                        customerProfile *profile = new customerProfile(), QString Address1 = "",
+                        QString Address2 = "", QString name = "");
     ~Spectacles();
 
-    qint32 balance = 0;
-    qint32 thisAccount = 0;
+    qint32 balance;
+    qint32 thisAccount;
     QString thisTransaction;
-    QString thisStatus = "";\
+    QString thisStatus;
+    QString globalName;
     customerProfile *thisProfile;
-    bool isDownPayment = false;
+    bool isDownPayment;
 
 private slots:
     void on_commandLinkButton_cancel_clicked();
