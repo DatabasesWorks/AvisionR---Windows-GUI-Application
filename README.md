@@ -5,13 +5,17 @@ Graphical user interface application on Windows for local business that interact
 and revenue using QT, SQL, and C++.
 
 Login Screen
+
 ![alt tag](http://i.imgur.com/peVwED7.png)
 
 Main Control Panel
+
 ![alt tag](http://i.imgur.com/5dXDN1C.png)
 
 Sample - New Purchase
+
 ![alt tag](http://i.imgur.com/fNCaEeP.png)
 
 Sample - Print
-![alt tag](http://i.imgur.com/qaGGnMt.png)
+
+![alt tag](http://i.imgur.com/VlFG6zg.png)
